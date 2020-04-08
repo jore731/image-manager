@@ -15,11 +15,11 @@ def scanFile():
     imagePath = input("Image to analyze:")
     splitted = imagePath.split(".")
     try:
-        extension = splitted[1]
+        if len(splitted)>1: extension = splitted[-1]
     except:
-        extension.lower() = "none"
+        extension = "none"
     print (extension)
-    if extension in validExtensions:
+    if extension.lower() in validExtensions:
         with open(f'{imagePath}', 'rb') as image_file:
                 try:
                     my_image = exif.Image(image_file)
@@ -44,7 +44,8 @@ def scanFile():
                     
 def scanDir():
     scanDirs = []
-    while (True)
+    inputPaths = []
+    while (True):
         inputData = input("Path to analyze (type ok when finished):")
         if inputData.lower() == "ok":
             break
@@ -56,17 +57,20 @@ def scanDir():
         for directory in directories:
             if not directory[0] in scanDirs:
                 scanDirs.append(directory[0])
-    for folderPath in scanDirs:
+    for folderPath in scanDirs[150:]:
         started = datetime.now()
         logging.info(f"{os.path.basename(folderPath)} started at {started}")
         scanned,relocated = 0,0
         for possibleImage in os.listdir(folderPath):
             splitted = possibleImage.split(".")
             try:
-                extension = splitted[1]
+                if len(splitted) > 1:
+                    extension = splitted[-1]
+                else:
+                    extension = "none"
             except:
                 extension = "none"
-            if extension in validExtensions:
+            if extension.lower() in validExtensions:
                 scanned += 1
                 imagePath = f"{folderPath}\\{possibleImage}"
                 with open(f'{imagePath}', 'rb') as image_file:
@@ -111,13 +115,16 @@ def scanDir():
                                     datePath = "desconocido"
                             else:
                                 datePath = "desconocido"
-                            if hasattr (my_image,"model"):
-                                newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\{my_image.model}"
-                            elif hasattr (my_image, "software"):
-                                newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\{my_image.software}"
-                            else:
+                            try:
+                                if hasattr (my_image,"model"):
+                                    newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\{my_image.model}"
+                                elif hasattr (my_image, "software"):
+                                    newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\{my_image.software}"
+                                else:
+                                    newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\desconocido"
+                            except:
                                 newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\desconocido"
-            
+
                             newImagePath = f"{newImageDirectoy}\\{os.path.basename(imagePath)}"
                             try:    
                                 if not os.path.exists(newImagePath):
