@@ -2,6 +2,7 @@ import os
 import logging
 import struct
 import json
+import time
 
 class tagsIFD:
     def __init__(self):
@@ -108,9 +109,11 @@ class NEFImage(TIFFImage):
         self.extension = splitted[-1].lower()
         emptyString =""
         self.noExtName = emptyString.join(splitted[0:-1])
-        self.checkExtension()
+        # self.checkExtension()
         self.imagePath = imagePath
         self.findJSON()
+        self._tags=[]
+        self._numberOfTags=[]
         self.NoTIFFError = ValueError(
             f"{self.fileName} is not recognized as a TIFF file")
         
@@ -183,34 +186,83 @@ class NEFImage(TIFFImage):
             self.image_file.seek(pos)
         return self._numberOfTagsFirstIFD
 
+    def getNumberOfTags(self, IFDId, offset):
+        while len(self._numberOfTags)<(IFDId+1):
+            self._numberOfTags.append(None)
+        if self._numberOfTags[IFDId]==None:
+            pos = self.image_file.tell()
+            self.image_file.seek(offset)
+            self._numberOfTags[IFDId] = self.readTIFFData(3, 1)
+            self.image_file.seek(pos)
+        return self._numberOfTags[IFDId]
+
     @property
     def tagsFirstIFD(self):
-        if not hasattr(self, "_tagsFirstIFD"):
-            self._tagsFirstIFD=tagsIFD()
+        if len(self._tags)==0:
+            self._tags.append(tagsIFD())
             if hasattr(self, "jsonPath"):
                 with open(self.jsonPath, "r") as json_file:
-                    self._tagsFirstIFD.__dict__.update(json.load(json_file))
+                    self._tags[0].__dict__.update(json.load(json_file))
             else:
-                pos = self.image_file.tell()
-                for tagIndex in range(self.numberOfTagsFirstIFD):
-                    self.image_file.seek(self.offsetFirstIFD+2+tagIndex*12)
-                    tag = 0
-                    while tag == 0:
-                        tag = self.readTIFFData(3, 1)
-                    if tag != 0:
-                        tag_type=self.readTIFFData(3,1)
-                        tag_count=self.readTIFFData(4,1)
-                        tag_value=self.readTIFFData(tag_type, tag_count, slotSize=4)
-                        if isinstance(tag_value, str):
-                            tag_value=tag_value.replace("\'", "\\\'")
-                            tag_value=tag_value.replace("\"", "\\\"")
-                            string=f"self._tagsFirstIFD.{self.tags[tag]} = \'{tag_value}\'"
-                        else:
-                            string=f"self._tagsFirstIFD.{self.tags[tag]} = {tag_value}"
-                        exec(string)
-                self.image_file.seek(pos)
-        return self._tagsFirstIFD
+                self.readIFD(0, self.offsetFirstIFD, self.numberOfTagsFirstIFD)
+
+        return self._tags[0]
     
+
+# @property
+#     def tagsFirstIFD(self):
+#         if not hasattr(self, "_tagsFirstIFD"):
+#             self._tagsFirstIFD=tagsIFD()
+#             if hasattr(self, "jsonPath"):
+#                 with open(self.jsonPath, "r") as json_file:
+#                     self._tagsFirstIFD.__dict__.update(json.load(json_file))
+#             else:
+#                 pos = self.image_file.tell()
+#                 for tagIndex in range(self.numberOfTagsFirstIFD):
+#                     self.image_file.seek(self.offsetFirstIFD+2+tagIndex*12)
+#                     tag = 0
+#                     while tag == 0:
+#                         tag = self.readTIFFData(3, 1)
+#                     if tag != 0:
+#                         tag_type=self.readTIFFData(3,1)
+#                         tag_count=self.readTIFFData(4,1)
+#                         tag_value=self.readTIFFData(tag_type, tag_count, slotSize=4)
+#                         if isinstance(tag_value, str):
+#                             tag_value=tag_value.replace("\'", "\\\'")
+#                             tag_value=tag_value.replace("\"", "\\\"")
+#                             string=f"self._tagsFirstIFD.{self.tags[tag]} = \'{tag_value}\'"
+#                         else:
+#                             string=f"self._tagsFirstIFD.{self.tags[tag]} = {tag_value}"
+#                         exec(string)
+#                 self.image_file.seek(pos)
+#         return self._tagsFirstIFD
+    
+
+
+    def readIFD(self,IFDId, offset, numberOfTags):
+        while len(self._tags)<(IFDId+1):
+            self._tags.append(tagsIFD())
+        pos = self.image_file.tell()
+        for tagIndex in range(numberOfTags):
+            self.image_file.seek(offset+2+tagIndex*12)
+            tag = 0
+            while tag == 0:
+                tag = self.readTIFFData(3, 1)
+            if tag != 0:
+                tag_type=self.readTIFFData(3,1)
+                tag_count=self.readTIFFData(4,1)
+                tag_value=self.readTIFFData(tag_type, tag_count, slotSize=4)
+                if isinstance(tag_value, str):
+                    tag_value=tag_value.replace("\'", "\\\'")
+                    tag_value=tag_value.replace("\"", "\\\"")
+                    string=f"self._tags[{IFDId}].{self.tags[tag]} = \'{tag_value}\'"
+                else:
+                    string=f"self._tags[{IFDId}].{self.tags[tag]} = {tag_value}"
+                exec(string)
+        self.image_file.seek(pos)
+        return self._tags[IFDId]
+
+
     @property
     def capyear(self):
         if hasattr(self.tagsFirstIFD, "DateTimeOriginal"):
@@ -266,3 +318,90 @@ class NEFImage(TIFFImage):
             else:
                 outpath+="UNKNOWN/"
         return outpath
+
+    def readContent(self,IFDId):
+        if hasattr(self._tags[IFDId],"StripOffsets") and hasattr(self._tags[IFDId],"StripByteCounts"):            
+            self.image_file.seek(self._tags[IFDId].StripOffsets)
+            return self.readTIFFData(1,self._tags[IFDId].StripByteCounts)
+            #return self.image_file.read(self._tags[IFDId].StripByteCounts)
+
+# import matplotlib.pyplot as plt
+# import matplotlib.image as mpimg
+# import numpy as np
+# t=time.time_ns()
+# imagen=NEFImage("00 test_images/test3.NEF")
+# print(imagen.tagsFirstIFD.RowsPerStrip)
+# data = imagen.readContent(0)
+# matrix=[]
+# for j in range(120):
+#     row = []
+#     for i in range (160):
+#         row.append(np.array([data[j*i*3],data[j*i*3+1],data[j*i*3+2]]))
+#     matrix.append(np.array(row))
+# # with open(f"test{0}.tiff","w+") as file:
+# #     file.write(data)
+
+# image = mpimg.imread("00 test_images/test3.NEF")
+# plt.imshow(image)
+# plt.show()
+
+# '''
+import numpy as np
+import matplotlib.pyplot as plt
+imagePath="00 test_images/test2.tiff"
+imagen=NEFImage(imagePath)
+print(imagen.tagsFirstIFD.__dict__)
+matrix = []
+data2 = imagen.readContent(0)
+print("data2 loaded")
+for j in range(imagen.tagsFirstIFD.ImageLength):
+    row = []
+    for i in range(imagen.tagsFirstIFD.ImageWidth):
+        pixel=[]
+        for k in range(imagen.tagsFirstIFD.SamplesPerPixel):
+            pixel.append(data2[k+imagen.tagsFirstIFD.SamplesPerPixel*(i+j*imagen.tagsFirstIFD.ImageWidth)])
+        row.append(pixel)
+    matrix.append(row)
+plotable = np.array(matrix)
+plt.imshow(plotable)
+plt.show()
+'''
+import matplotlib.pyplot as plt
+import PIL.Image
+import numpy as np
+imagefile = PIL.Image.open(imagePath)
+a = np.array(imagefile)
+print(imagen.tagsFirstIFD.SubIFDs)
+tagsExif = imagen.getNumberOfTags(0,imagen.tagsFirstIFD.Exif_IFD)
+subTags=[]
+for index, subIFD in enumerate(imagen.tagsFirstIFD.SubIFDs):
+    temp = imagen.getNumberOfTags(2+index,subIFD)
+    while len(subTags)<index+1:
+        subTags.append(tagsIFD)
+    subTags[index] = imagen.readIFD(2+index,subIFD,temp)
+    if hasattr(subTags[index],"JPEGInterchangeFormat") and hasattr(subTags[index],"JPEGInterchangeFormatLength") :
+        imagen.image_file.seek(subTags[index].JPEGInterchangeFormat)
+        # data = imagen.readTIFFData(7, subTags[0].JPEGInterchangeFormatLength)
+        data = imagen.image_file.read(subTags[0].JPEGInterchangeFormatLength)
+        with open(f"test{index}.jpeg","wb") as file:
+            file.write(data)
+    
+imagen.image_file.seek(subTags[2].JPEGInterchangeFormat)
+# data = imagen.readTIFFData(7, subTags[2].JPEGInterchangeFormatLength)
+data = imagen.image_file.read(subTags[2].JPEGInterchangeFormatLength)
+with open("test.jpeg","wb") as file:
+    file.write(data)
+input()
+imagen.image_file.seek(imagen._tags[3].StripOffsets)
+data2 = imagen.image_file.read(imagen._tags[3].StripByteCounts)
+matrix=[]
+for j in range(1,121):
+    row = []
+    for i in range(1,161):
+        row.append([data2[j*i*3],data2[j*i*3+1],data2[j*i*3+2]])
+    matrix.append(row)
+plotable = np.array(matrix)
+
+plt.imshow(plotable)
+plt.show()
+input()'''
