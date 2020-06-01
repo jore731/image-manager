@@ -74,6 +74,7 @@ class dragToOrganizeView(QWidget):
             relPath = NEF.relocatePath(os.path.dirname(NEF.imagePath), ["capyear", "capmonth", "capday", "capdevice"])
             self.createDir(relPath)
             relFile = os.path.join(relPath,NEF.fileName)
+            print(relFile)
             shutil.copy2(NEF.imagePath, relFile)
             # if not hasattr(NEF, "jsonPath"):
             #     NEF.createJSON(os.path.join(os.path.dirname(NEF.imagePath),"json"))

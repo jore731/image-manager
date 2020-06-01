@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>horizontalBarPlot &mdash; GraphLib 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="metricsEvolution" href="metricsEvolution.html" />
+    <link rel="prev" title="enhancedTable" href="enhancedTable.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GraphLib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../graphImageIndex.html">Graph Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boxPlot.html">boxPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enhancedTable.html">enhancedTable</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">horizontalBarPlot</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metricsEvolution.html">metricsEvolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrencePieChart.html">ocurrencePieChart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrTable.html">ocurrTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarPlot.html">polarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="progressPlot.html">progressPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radarArray.html">radarArray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scatterPlotMatrix.html">scatterPlotMatrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scattHist.html">scattHist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stackedBars.html">stackedBars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standartColorPalette.html">standartColorPalette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verticalBarPlot.html">verticalBarPlot</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraphLib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>horizontalBarPlot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rstFiles/horizontalBarPlot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-horizontalBarPlot">
+<span id="horizontalbarplot"></span><h1>horizontalBarPlot<a class="headerlink" href="#module-horizontalBarPlot" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: u64053</p>
+<dl class="py function">
+<dt id="horizontalBarPlot.hBarPlot">
+<code class="sig-prename descclassname">horizontalBarPlot.</code><code class="sig-name descname">hBarPlot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">yCol</span></em>, <em class="sig-param"><span class="n">xCols</span></em>, <em class="sig-param"><span class="n">xLabel</span></em>, <em class="sig-param"><span class="n">graphTitle</span></em>, <em class="sig-param"><span class="n">save</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#horizontalBarPlot.hBarPlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a horizontal bar graph with vertical lines,
+anotations and text under the graph.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – Dataframe with the data to represent.</p></li>
+<li><p><strong>yCol</strong> (<em>string</em>) – df column name to represent in the y axis.</p></li>
+<li><p><strong>xCols</strong> (<em>string</em><em> or </em><em>list of strings</em>) – df column or column names
+to represent in the x axis. If multiple columns are used,
+stacked bars will be used.</p></li>
+<li><p><strong>xLabel</strong> (<em>string</em>) – label for the x axis.</p></li>
+<li><p><strong>graphTitle</strong> (<em>string</em>) – Title of the graph, will be used as file name if not provided.</p></li>
+<li><p><strong>save</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If True, the figure is saved into a file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – figure that stores the generated graph.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib figure object.</p>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><ul>
+<li><p><strong>colorCol</strong> (<em>string, optional, default False</em>) – df col to use as label to choose color.
+If False all bars are colored equally.</p></li>
+<li><p><strong>colorDict</strong> (<em>list of dictionaries, default False</em>) – List with as many elements as xCols
+with dicts with colorCol label:color to use to color the bars.
+Example: [{“S1”: “g”, “S2”: “r”}, {“S1”: “b”,”S2”: “orange”}]</p></li>
+<li><p><strong>xLim</strong> (<em>float, optional, default False</em>) – Limit of the x axis in x data units.</p></li>
+<li><p><strong>nLim</strong> (<em>integer, optional, default False.</em>) – Limit of the number of elemnents of yCol
+displayed in the y axis.</p></li>
+<li><p><strong>ascending</strong> (<em>boolean, optional, default False.</em>) – False for higher values, True of lower values.</p></li>
+<li><p><strong>vLabels</strong> (<em>list of lists</em>) – List of lists with annotations parameters in the format:
+[[x1, y1, text1, color1, style1] ,
+[x2, y2, text2, color2, style2] , …]</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>x : float, x in data units where the vertical line is.</p></li>
+<li><p>y : integer, y bar position to place the annotation.</p></li>
+<li><p>text : string, text to display in the annotation.</p></li>
+<li><p>color : string, rgb color for the line and annotation.</p></li>
+<li><p>style : string, (“regular”, “highlighted”, “dashed”, “regularD”).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>yLabel</strong> (<em>string, optional.</em>) – Label for the y axis.</p></li>
+<li><p><strong>xSize</strong> (<em>float, optional, default 12</em>) – Width of the figure in inches.</p></li>
+<li><p><strong>ySize</strong> (<em>float, optional, default 9</em>) – Height in inches.</p></li>
+<li><p><strong>fontScale</strong> (<em>float, optional, default 1</em>) – Factor scale for the text.</p></li>
+<li><p><strong>xTicksNum</strong> (<em>integer, optional.</em>) – Number of x axis ticks.</p></li>
+<li><p><strong>palette</strong> (<em>seaborn compatible palette, optional</em>) – Can be the name of a seaborn palette,
+a seaborn palette or a list interpretable
+as a palette by seaborn.</p></li>
+<li><p><strong>fileName</strong> (<em>string, optional</em>) – If not provided graphTitle will be used.
+Non alphanumeric values will be deleted.</p></li>
+<li><p><strong>orderCol</strong> (<em>string, optional, default false.</em>) – Column to use to order the df.
+If false use the first element of xCols</p></li>
+<li><p><strong>yElems</strong> (<em>list of strings, optional</em>) – List with the elements of the ycol you wish to represent.
+If not provided, all elements are represented.
+It is not recomended to use it with the kw nLim.</p></li>
+<li><p><strong>subText</strong> (<em>string, optional.</em>) – If not False, add text to the bottom of the graph.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;AC&quot;</span><span class="p">:[</span><span class="s2">&quot;STXXX&quot;</span><span class="p">,</span> <span class="s2">&quot;STYYY&quot;</span><span class="p">,</span> <span class="s2">&quot;SSZZZ&quot;</span><span class="p">,</span> <span class="s2">&quot;SSAAA&quot;</span><span class="p">,</span>
+<span class="gp">... </span>            <span class="s2">&quot;SSBBB&quot;</span><span class="p">,</span> <span class="s2">&quot;SSBB1&quot;</span><span class="p">,</span> <span class="s2">&quot;SSBB2&quot;</span><span class="p">,</span> <span class="s2">&quot;SSBB3&quot;</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;Type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;S2&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;FH&quot;</span><span class="p">:[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1200</span><span class="p">,</span> <span class="mi">860</span><span class="p">,</span> <span class="mi">1300</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">1350</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;FH Period&quot;</span><span class="p">:[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">135</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v_labels</span><span class="o">=</span><span class="p">[[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;adf5646asdf2213&#39;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;regular&quot;</span><span class="p">],</span>
+<span class="gp">... </span>          <span class="p">[</span><span class="mi">1600</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;asd5456&#39;</span><span class="p">,</span> <span class="s2">&quot;#6B8E23&quot;</span><span class="p">,</span> <span class="s2">&quot;highlighted&quot;</span><span class="p">],</span>
+<span class="gp">... </span>          <span class="p">[</span><span class="mi">2400</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;ads5456&#39;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;dashed&quot;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">keywords</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">xLim</span><span class="o">=</span><span class="mi">6000</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">vLabels</span><span class="o">=</span><span class="n">v_labels</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">yLabel</span><span class="o">=</span><span class="s2">&quot;label y&quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">colorCol</span><span class="o">=</span><span class="s2">&quot;Type&quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">xSize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">ySize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">colorDict</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;S1&quot;</span><span class="p">:</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">:</span><span class="s2">&quot;r&quot;</span><span class="p">},</span>
+<span class="gp">... </span>                         <span class="p">{</span><span class="s2">&quot;S1&quot;</span><span class="p">:</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;S2&quot;</span><span class="p">:</span><span class="s2">&quot;orange&quot;</span><span class="p">}],</span>
+<span class="gp">... </span>              <span class="n">fontScale</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">xTicksNum</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">patette</span><span class="o">=</span><span class="s2">&quot;deep&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hBarPlot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;AC&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;FH&quot;</span><span class="p">,</span> <span class="s2">&quot;FH Period&quot;</span><span class="p">],</span>
+<span class="gp">... </span>         <span class="s2">&quot;FH [h]&quot;</span><span class="p">,</span> <span class="s2">&quot;FH leaders&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">keywords</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../_images/horizontalBarPlotExample1.png"><img alt="../_images/horizontalBarPlotExample1.png" class="align-center" src="../_images/horizontalBarPlotExample1.png" style="width: 600px;" /></a>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metricsEvolution.html" class="btn btn-neutral float-right" title="metricsEvolution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="enhancedTable.html" class="btn btn-neutral float-left" title="enhancedTable" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, &#34;U64053&#34;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

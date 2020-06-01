@@ -1,0 +1,90 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter B
+  \item \spxentry{boxPlot}
+    \subitem \spxentry{module}, \hyperpage{9}
+  \item \spxentry{boxPlotter()}\spxextra{in module boxPlot}, \hyperpage{9}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{enhancedTable}
+    \subitem \spxentry{module}, \hyperpage{11}
+  \item \spxentry{enhancedTable()}\spxextra{in module enhancedTable}, \hyperpage{11}
+
+  \indexspace
+  \bigletter H
+  \item \spxentry{hBarPlot()}\spxextra{in module horizontalBarPlot}, \hyperpage{15}
+  \item \spxentry{horizontalBarPlot}
+    \subitem \spxentry{module}, \hyperpage{15}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{metricEvolutionGraph()}\spxextra{in module metricsEvolution}, \hyperpage{19}
+  \item \spxentry{metricsEvolution}
+    \subitem \spxentry{module}, \hyperpage{19}
+  \item \spxentry{module}
+    \subitem \spxentry{boxPlot}, \hyperpage{9}
+    \subitem \spxentry{enhancedTable}, \hyperpage{11}
+    \subitem \spxentry{horizontalBarPlot}, \hyperpage{15}
+    \subitem \spxentry{metricsEvolution}, \hyperpage{19}
+    \subitem \spxentry{ocurrencePieChart}, \hyperpage{23}
+    \subitem \spxentry{ocurrTable}, \hyperpage{25}
+    \subitem \spxentry{polarPlot}, \hyperpage{29}
+    \subitem \spxentry{progressPlot}, \hyperpage{33}
+    \subitem \spxentry{radarArray}, \hyperpage{37}
+    \subitem \spxentry{scatterPlotMatrix}, \hyperpage{41}
+    \subitem \spxentry{scattHist}, \hyperpage{43}
+    \subitem \spxentry{stackedBars}, \hyperpage{47}
+    \subitem \spxentry{standartColorPalette}, \hyperpage{49}
+    \subitem \spxentry{verticalBarPlot}, \hyperpage{51}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{ocurrencePieChart}
+    \subitem \spxentry{module}, \hyperpage{23}
+  \item \spxentry{ocurrenceTable()}\spxextra{in module ocurrTable}, \hyperpage{25}
+  \item \spxentry{ocurrPieChart()}\spxextra{in module ocurrencePieChart}, \hyperpage{23}
+  \item \spxentry{ocurrTable}
+    \subitem \spxentry{module}, \hyperpage{25}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{polarBarPlot()}\spxextra{in module polarPlot}, \hyperpage{29}
+  \item \spxentry{polarPlot}
+    \subitem \spxentry{module}, \hyperpage{29}
+  \item \spxentry{progressPlot}
+    \subitem \spxentry{module}, \hyperpage{33}
+  \item \spxentry{progressPlot()}\spxextra{in module progressPlot}, \hyperpage{33}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{radarArray}
+    \subitem \spxentry{module}, \hyperpage{37}
+  \item \spxentry{radarArrayGraph()}\spxextra{in module radarArray}, \hyperpage{37}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{scatterHist()}\spxextra{in module scattHist}, \hyperpage{43}
+  \item \spxentry{scatterMatrix()}\spxextra{in module scatterPlotMatrix}, \hyperpage{41}
+  \item \spxentry{scatterPlotMatrix}
+    \subitem \spxentry{module}, \hyperpage{41}
+  \item \spxentry{scattHist}
+    \subitem \spxentry{module}, \hyperpage{43}
+  \item \spxentry{stackedBars}
+    \subitem \spxentry{module}, \hyperpage{47}
+  \item \spxentry{stackedbars()}\spxextra{in module stackedBars}, \hyperpage{47}
+  \item \spxentry{standartColorPalette}
+    \subitem \spxentry{module}, \hyperpage{49}
+  \item \spxentry{stdColor()}\spxextra{in module standartColorPalette}, \hyperpage{49}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{vBarPlot()}\spxextra{in module verticalBarPlot}, \hyperpage{51}
+  \item \spxentry{verticalBarPlot}
+    \subitem \spxentry{module}, \hyperpage{51}
+
+\end{sphinxtheindex}

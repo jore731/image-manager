@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>boxPlot &mdash; GraphLib 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="enhancedTable" href="enhancedTable.html" />
+    <link rel="prev" title="Graph Index" href="../graphImageIndex.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GraphLib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../graphImageIndex.html">Graph Index</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">boxPlot</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="enhancedTable.html">enhancedTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="horizontalBarPlot.html">horizontalBarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metricsEvolution.html">metricsEvolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrencePieChart.html">ocurrencePieChart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrTable.html">ocurrTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarPlot.html">polarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="progressPlot.html">progressPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radarArray.html">radarArray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scatterPlotMatrix.html">scatterPlotMatrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scattHist.html">scattHist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stackedBars.html">stackedBars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standartColorPalette.html">standartColorPalette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verticalBarPlot.html">verticalBarPlot</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraphLib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>boxPlot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rstFiles/boxPlot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-boxPlot">
+<span id="boxplot"></span><h1>boxPlot<a class="headerlink" href="#module-boxPlot" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: U64053</p>
+<dl class="py function">
+<dt id="boxPlot.boxPlotter">
+<code class="sig-prename descclassname">boxPlot.</code><code class="sig-name descname">boxPlotter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">graphTitle</span></em>, <em class="sig-param"><span class="n">boxCols</span></em>, <em class="sig-param"><span class="n">save</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boxPlot.boxPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a box plot from the data of a dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas DataFrame</em>) – dataframe containing the data to plot.</p></li>
+<li><p><strong>graphTitle</strong> (<em>string</em>) – title of the plot, used as fileName if not provided.</p></li>
+<li><p><strong>boxCols</strong> (<em>list of strings</em>) – Columns of df to plot in the boxplots.</p></li>
+<li><p><strong>save</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If True, the figure is saved into a file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – figure that stores the generated graph.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib figure object.</p>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>tickLabels</strong> (<em>list of strings, optional</em>) – Labels for the box plot, must have the same lenght as boxCols.
+If not provided, boxCols is used.</p></li>
+<li><p><strong>colors</strong> (<em>list of strings, optional</em>) – Colors to color the boxplos, must have the same lenght as boxCols.
+If not provided the default palette is used.</p></li>
+<li><p><strong>xLabel</strong> (<em>string, optional</em>) – Label for the x axis.</p></li>
+<li><p><strong>yLabel</strong> (<em>string, optional</em>) – Label for the y axis.</p></li>
+<li><p><strong>showMeans</strong> (<em>boolean, optional, default is True</em>) – Show mean marker.</p></li>
+<li><p><strong>showFliers</strong> (<em>boolean, optional, default is True</em>) – Show fliers markers.</p></li>
+<li><p><strong>notch</strong> (<em>boolean, optional, default False</em>) – Activate notched boxes.</p></li>
+<li><p><strong>xSize</strong> (<em>float, optional, default is 10.</em>) – X dimension of the figure in inches.</p></li>
+<li><p><strong>ySize</strong> (<em>float, optional, default is 6.</em>) – Y dimension of the figure in inches.</p></li>
+<li><p><strong>yLim</strong> (<em>list of floats (min, max), optional</em>) – It is used to set y axis limits.</p></li>
+<li><p><strong>cappkw</strong> (<em>dict, optional, {“color”: “k”}</em>) – Specifies the style of the caps.</p></li>
+<li><p><strong>boxeskw</strong> (<em>dict, optional, default is {“color”:”k”}</em>) – Specifies the style of the box.</p></li>
+<li><p><strong>whiskerskw</strong> (<em>dict, optional, default is {“color”:”k”}</em>) – Specifies the style of the whiskers.</p></li>
+<li><p><strong>flierskw</strong> (<em>dict, optional</em>) – Specifies the style of the fliers.
+The default is {“marker”:’.’, “markeredgecolor”:”k”}.</p></li>
+<li><p><strong>medianskw</strong> (<em>dict, optional, default {“color”:”k”}</em>) – Specifies the style of the median.</p></li>
+<li><p><strong>meankw</strong> (<em>dict, optional</em>) – Specifies the style of the mean.
+The default is {“marker”:”o”,
+“markerfacecolor”:”lightgrey”,
+“markeredgecolor”:”k”, “markersize”:”5”}.</p></li>
+<li><p><strong>palette</strong> (<em>seaborn compatible palette, default “deep”</em>) – Can be the name of a seaborn palette,
+a seaborn palette or a list
+interpretable as a palette by seaborn.</p></li>
+<li><p><strong>fileName</strong> (<em>string, optional</em>) – File name to save, if not provided graphTitle will be used.
+Non alphanumeric values will be deleted.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;loc&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">17</span><span class="p">)}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;AC&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AC0&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ac</span><span class="p">)</span> <span class="k">for</span> <span class="n">ac</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">81</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">boxPlotter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;test title&quot;</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="p">[</span><span class="s2">&quot;loc1&quot;</span><span class="p">,</span> <span class="s2">&quot;loc2&quot;</span><span class="p">,</span> <span class="s2">&quot;loc3&quot;</span><span class="p">,</span> <span class="s2">&quot;loc4&quot;</span><span class="p">,</span> <span class="s2">&quot;loc5&quot;</span><span class="p">],</span>
+<span class="gp">... </span>          <span class="n">yLabel</span><span class="o">=</span><span class="s2">&quot;y label test&quot;</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">xLabel</span><span class="o">=</span><span class="s2">&quot;x label test&quot;</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">tickLabels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;first&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+<span class="gp">... </span>          <span class="n">flierskw</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;marker&quot;</span><span class="p">:</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s2">&quot;markeredgecolor&quot;</span><span class="p">:</span><span class="s2">&quot;red&quot;</span><span class="p">},</span>
+<span class="gp">... </span>          <span class="n">palette</span> <span class="o">=</span> <span class="s2">&quot;muted&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../_images/boxPlotTest1.png"><img alt="../_images/boxPlotTest1.png" class="align-center" src="../_images/boxPlotTest1.png" style="width: 600px;" /></a>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="enhancedTable.html" class="btn btn-neutral float-right" title="enhancedTable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../graphImageIndex.html" class="btn btn-neutral float-left" title="Graph Index" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, &#34;U64053&#34;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

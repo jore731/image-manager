@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ocurrencePieChart &mdash; GraphLib 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ocurrTable" href="ocurrTable.html" />
+    <link rel="prev" title="metricsEvolution" href="metricsEvolution.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GraphLib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../graphImageIndex.html">Graph Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boxPlot.html">boxPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enhancedTable.html">enhancedTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="horizontalBarPlot.html">horizontalBarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metricsEvolution.html">metricsEvolution</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ocurrencePieChart</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrTable.html">ocurrTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarPlot.html">polarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="progressPlot.html">progressPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radarArray.html">radarArray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scatterPlotMatrix.html">scatterPlotMatrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scattHist.html">scattHist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stackedBars.html">stackedBars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standartColorPalette.html">standartColorPalette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verticalBarPlot.html">verticalBarPlot</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraphLib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ocurrencePieChart</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rstFiles/ocurrencePieChart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-ocurrencePieChart">
+<span id="ocurrencepiechart"></span><h1>ocurrencePieChart<a class="headerlink" href="#module-ocurrencePieChart" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: u64053</p>
+<dl class="py function">
+<dt id="ocurrencePieChart.ocurrPieChart">
+<code class="sig-prename descclassname">ocurrencePieChart.</code><code class="sig-name descname">ocurrPieChart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">countCol</span></em>, <em class="sig-param"><span class="n">graphTitle</span></em>, <em class="sig-param"><span class="n">save</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ocurrencePieChart.ocurrPieChart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a pie chart according to
+the occurence of values in a column of a dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – Dataframe containing the data.</p></li>
+<li><p><strong>countCol</strong> (<em>string</em>) – Column of the df to count the ocurrence of the values.</p></li>
+<li><p><strong>graphTitle</strong> (<em>string</em><em>,</em>) – title of the graph and name of the file
+if fileName is not provided.</p></li>
+<li><p><strong>save</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If True, the figure is saved into a file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – figure that stores the generated graph.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib figure object.</p>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>sufix</strong> (<em>string, optional</em>) – sufix to the labels</p></li>
+<li><p><strong>xSize</strong> (<em>float, optional, default 8,</em>) – max horizontal size of the figure, in inches.</p></li>
+<li><p><strong>ySize</strong> (<em>float, optional, default 8,</em>) – max vertical size of the figure, in inches.</p></li>
+<li><p><strong>fontScale</strong> (<em>float, optional, default 1,</em>) – global font scalation factor for every text of the figure.</p></li>
+<li><p><strong>linewidth</strong> (<em>float, default 0,</em>) – Contour line width for the pie slices
+in pixels, if 0 no line is displayed.</p></li>
+<li><p><strong>linecolor</strong> (<em>strings, optional, default “k”,</em>) – Colors to use for the contour lines to use,
+hex value or named color.</p></li>
+<li><p><strong>shadow</strong> (<em>boolean, optional, default False</em>) – If True, shadows are displayed for the pie.</p></li>
+<li><p><strong>explode</strong> (<em>float, optional, default 0,</em>) – exploding factor for the pie chart, it separates the pie slices.
+If 0, no explosion is performed.</p></li>
+<li><p><strong>footnote</strong> (<em>string, optional</em>) – footnote text to display</p></li>
+<li><p><strong>foonoteSize</strong> (<em>float, optionial, default 18.</em>) – Font size of the footnote.</p></li>
+<li><p><strong>footnoteColor</strong> (<em>string, optional, default “grey”</em>) – colors the text of the footnote, hex value or named color.</p></li>
+<li><p><strong>footnoteStyle</strong> (<em>string, optional, default “italic”</em>) – style for the footnote,
+valid values: ‘normal’, ‘italic’, ‘oblique’.</p></li>
+<li><p><strong>palette</strong> (<em>seaborn compatible palette, optional</em>) – Can be the name of a seaborn palette,
+a seaborn palette or a list interpretable
+as a palette by seaborn.</p></li>
+<li><p><strong>fileName</strong> (<em>string, optional</em>) – if not provided graphHeader will be used.
+Non alphanumeric values will be deleted.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+<span class="gp">... </span>               <span class="p">{</span><span class="s1">&#39;element&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;elemXX&#39;</span><span class="p">,</span> <span class="s1">&#39;elemX1&#39;</span><span class="p">,</span> <span class="s1">&#39;elemX2&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                            <span class="s1">&#39;elemX3&#39;</span><span class="p">,</span> <span class="s1">&#39;elemX4&#39;</span><span class="p">,</span> <span class="s1">&#39;elemX5&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                            <span class="s1">&#39;elemX6&#39;</span><span class="p">,</span> <span class="s1">&#39;elemX7&#39;</span><span class="p">,</span> <span class="s1">&#39;elemX8&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                            <span class="s1">&#39;elemX9&#39;</span><span class="p">,</span> <span class="s1">&#39;elem10&#39;</span><span class="p">,</span> <span class="s1">&#39;elem11&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                            <span class="s1">&#39;elem12&#39;</span><span class="p">,</span> <span class="s1">&#39;elem13&#39;</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="s1">&#39;groups&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;group1&#39;</span><span class="p">,</span><span class="s1">&#39;group1&#39;</span><span class="p">,</span><span class="s1">&#39;group1&#39;</span><span class="p">,</span><span class="s1">&#39;group1&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="s1">&#39;group2&#39;</span><span class="p">,</span><span class="s1">&#39;group2&#39;</span><span class="p">,</span><span class="s1">&#39;group2&#39;</span><span class="p">,</span><span class="s1">&#39;group3&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="s1">&#39;group4&#39;</span><span class="p">,</span><span class="s1">&#39;group4&#39;</span><span class="p">,</span><span class="s1">&#39;group4&#39;</span><span class="p">,</span><span class="s1">&#39;group4&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="s1">&#39;group5&#39;</span><span class="p">,</span><span class="s1">&#39;group5&#39;</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ocurrPieChart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">countCol</span><span class="o">=</span><span class="s1">&#39;groups&#39;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">graphTitle</span><span class="o">=</span><span class="s2">&quot;Test table&quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">sufix</span><span class="o">=</span><span class="s2">&quot; elements&quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">fontScale</span><span class="o">=</span><span class="mf">1.6</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;pastel&quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">linecolor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">explode</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">footnote</span><span class="o">=</span><span class="s2">&quot;*footnote for test &quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">footnoteStyle</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="n">fileName</span><span class="o">=</span> <span class="s2">&quot;ocurr Pie Chart example&quot;</span>
+<span class="gp">... </span>              <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../_images/ocurrPieChartExample1.png"><img alt="../_images/ocurrPieChartExample1.png" class="align-center" src="../_images/ocurrPieChartExample1.png" style="width: 600px;" /></a>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ocurrTable.html" class="btn btn-neutral float-right" title="ocurrTable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="metricsEvolution.html" class="btn btn-neutral float-left" title="metricsEvolution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, &#34;U64053&#34;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

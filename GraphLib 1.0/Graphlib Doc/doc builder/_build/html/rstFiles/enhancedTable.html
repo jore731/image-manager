@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>enhancedTable &mdash; GraphLib 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="horizontalBarPlot" href="horizontalBarPlot.html" />
+    <link rel="prev" title="boxPlot" href="boxPlot.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GraphLib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../graphImageIndex.html">Graph Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boxPlot.html">boxPlot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">enhancedTable</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="horizontalBarPlot.html">horizontalBarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metricsEvolution.html">metricsEvolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrencePieChart.html">ocurrencePieChart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrTable.html">ocurrTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarPlot.html">polarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="progressPlot.html">progressPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radarArray.html">radarArray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scatterPlotMatrix.html">scatterPlotMatrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scattHist.html">scattHist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stackedBars.html">stackedBars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standartColorPalette.html">standartColorPalette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verticalBarPlot.html">verticalBarPlot</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraphLib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>enhancedTable</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rstFiles/enhancedTable.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-enhancedTable">
+<span id="enhancedtable"></span><h1>enhancedTable<a class="headerlink" href="#module-enhancedTable" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: u64053</p>
+<dl class="py function">
+<dt id="enhancedTable.enhancedTable">
+<code class="sig-prename descclassname">enhancedTable.</code><code class="sig-name descname">enhancedTable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">fileName</span></em>, <em class="sig-param"><span class="n">rowLabelCol</span></em>, <em class="sig-param"><span class="n">save</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#enhancedTable.enhancedTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represent a table or several tables.
+Options to add a total row, header, labels…</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas Dataframe</em>) – Dataframe containing the data.</p></li>
+<li><p><strong>fileName</strong> (<em>string</em>) – Filename to use to save the table,
+non alphanumeric characters will be removed.</p></li>
+<li><p><strong>rowLabelcol</strong> (<em>string</em>) – Name of the dataframe column of df to use as label values.</p></li>
+<li><p><strong>save</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If True, the figure is saved into a file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – figure that stores the generated graph.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib figure object.</p>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>labelStyle</strong> (<em>string, optional, default “label”,</em>) – Style of the labels, “label” or “column”.</p></li>
+<li><p><strong>totalRow</strong> (<em>boolean, optional, default False</em>) – If true add a new row with the total per colum.</p></li>
+<li><p><strong>header</strong> (<em>string, optional, default False</em>) – If it has a value add a header cell with that value.</p></li>
+<li><p><strong>tableNum</strong> (<em>integer, optional, default 1.</em>) – Number of tables to split the data in.</p></li>
+<li><p><strong>layout</strong> (<em>string, optional, default “vertical”</em>) – Layout to place the tables relative to each others, can be
+‘horizontal’ or ‘vertical’.</p></li>
+<li><p><strong>fontSize</strong> (<em>integer, optional, default False.</em>) – Size of the font, if False,
+let the code decide the best horizontal fit.</p></li>
+<li><p><strong>xSize</strong> (<em>float, optional, default 18</em>) – Max horizontal size of the figure, in inches.</p></li>
+<li><p><strong>ySize</strong> (<em>float, optional, default 8.</em>) – Max vertical size of the figure, in inches.</p></li>
+<li><p><strong>rowLabelColor</strong> (<em>string, optional, default “grey”</em>) – Color to use for the labels, named colors or HEX values.</p></li>
+<li><p><strong>colLabelColor</strong> (<em>string, optional, default “grey”</em>) – Color to use for the labels, named colors or HEX values.</p></li>
+<li><p><strong>minimalistic</strong> (<em>boolean, optional, default False.</em>) – If true, most of the cell lines are hidden.</p></li>
+<li><p><strong>palette</strong> (<em>seaborn palette or compatible, optional.</em>) – Seaborn compatible palette,
+can be the name of a seaborn palette,
+a seaborn palette or a list interpretable
+as a palette by seaborn.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Type&quot;</span><span class="p">:[</span><span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;F&quot;</span><span class="p">:[</span><span class="mi">15000</span><span class="p">,</span> <span class="mi">12000</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;FH&quot;</span><span class="p">:[</span><span class="mi">21000</span><span class="p">,</span> <span class="mi">15000</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;Total landings&quot;</span><span class="p">:[</span><span class="mi">42000</span><span class="p">,</span> <span class="mi">11000</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;FS landings&quot;</span><span class="p">:[</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">2396</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;AR land&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;RL&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;T&amp;G&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8000</span><span class="p">,</span> <span class="mi">9500</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;Bounces&quot;</span><span class="p">:[</span><span class="mi">19000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;Test Deploy&quot;</span><span class="p">:[</span><span class="s2">&quot;not available&quot;</span><span class="p">,</span> <span class="s2">&quot;not available&quot;</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;In-flight  Deploy&quot;</span><span class="p">:[</span><span class="mi">4000</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;MNT probe Deploy&quot;</span><span class="p">:[</span><span class="s2">&quot;not available&quot;</span><span class="p">,</span> <span class="s2">&quot;not available&quot;</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;Contacts&quot;</span><span class="p">:[</span><span class="s2">&quot;not available&quot;</span><span class="p">,</span> <span class="s2">&quot;not available&quot;</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;Total Cycles&quot;</span><span class="p">:[</span><span class="mi">45000</span><span class="p">,</span> <span class="mi">16000</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;In-flight Cycles&quot;</span><span class="p">:[</span><span class="mi">37000</span><span class="p">,</span> <span class="mi">11000</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;MNT Cycles&quot;</span><span class="p">:[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">444</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;Antena&quot;</span><span class="p">:[</span><span class="mi">550</span><span class="p">,</span> <span class="mi">333</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kw</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">labelStyle</span><span class="o">=</span><span class="s2">&quot;label&quot;</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">totalRow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">header</span><span class="o">=</span><span class="s2">&quot;test header&quot;</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">tableNum</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">layout</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">fontSize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">xSize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">ySize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">rowLabelColor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+<span class="gp">... </span>          <span class="n">colLabelColor</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span> <span class="o">=</span> <span class="n">enhancedTable</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;test table&quot;</span><span class="p">,</span> <span class="n">rowLabelCol</span><span class="o">=</span><span class="s2">&quot;Type&quot;</span><span class="p">,</span>
+<span class="gp">... </span>                    <span class="n">save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../_images/enhancedTableExample1.png"><img alt="../_images/enhancedTableExample1.png" class="align-center" src="../_images/enhancedTableExample1.png" style="width: 600px;" /></a>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="horizontalBarPlot.html" class="btn btn-neutral float-right" title="horizontalBarPlot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="boxPlot.html" class="btn btn-neutral float-left" title="boxPlot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, &#34;U64053&#34;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

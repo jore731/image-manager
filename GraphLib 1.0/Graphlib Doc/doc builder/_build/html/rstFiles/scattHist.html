@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scattHist &mdash; GraphLib 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="stackedBars" href="stackedBars.html" />
+    <link rel="prev" title="scatterPlotMatrix" href="scatterPlotMatrix.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GraphLib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../graphImageIndex.html">Graph Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boxPlot.html">boxPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enhancedTable.html">enhancedTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="horizontalBarPlot.html">horizontalBarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metricsEvolution.html">metricsEvolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrencePieChart.html">ocurrencePieChart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrTable.html">ocurrTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarPlot.html">polarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="progressPlot.html">progressPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radarArray.html">radarArray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scatterPlotMatrix.html">scatterPlotMatrix</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">scattHist</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stackedBars.html">stackedBars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standartColorPalette.html">standartColorPalette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verticalBarPlot.html">verticalBarPlot</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraphLib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>scattHist</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rstFiles/scattHist.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-scattHist">
+<span id="scatthist"></span><h1>scattHist<a class="headerlink" href="#module-scattHist" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: u64053</p>
+<dl class="py function">
+<dt id="scattHist.scatterHist">
+<code class="sig-prename descclassname">scattHist.</code><code class="sig-name descname">scatterHist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">xCol</span></em>, <em class="sig-param"><span class="n">yCol</span></em>, <em class="sig-param"><span class="n">graphTitle</span></em>, <em class="sig-param"><span class="n">save</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scattHist.scatterHist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a center scatter plot of the kind “hex”, “scatter” or “kde”,
+and a top and right (border) histogram plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – Dataframe with the data to represent.</p></li>
+<li><p><strong>xCol</strong> (<em>string</em>) – df column name to represent in the x axis.</p></li>
+<li><p><strong>yCol</strong> (<em>string</em>) – df column name to represent in the y axis.</p></li>
+<li><p><strong>graphTitle</strong> (<em>string</em>) – title of the graph and filename for saving.</p></li>
+<li><p><strong>save</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If True, the figure is saved into a file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – object that stores the generated graph.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>seaborn JoinGrid object.</p>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>cKind</strong> (<em>string, {“hex”, “kde”, “scatter”}, optional, default “scatter”</em>) – Kind of plot to use for the center plot.
+The options are “hex” for a hexagonal grid plot,
+“kde” for a kernel density estimate plot (or level surfaces)
+and “scatter” for the typical scatter plot.</p></li>
+<li><p><strong>xLabel</strong> (<em>string, optional</em>) – Label for the x axis. If not provided xCol is used.</p></li>
+<li><p><strong>yLabel</strong> (<em>string, optional</em>) – Label for the y axis. If not provided yCol is used.</p></li>
+<li><p><strong>size</strong> (<em>float, optional, default 7</em>) – Size of the figure in inches.</p></li>
+<li><p><strong>centerPropor</strong> (<em>float, optional, default 5</em>) – Relative size of the center to the margins.</p></li>
+<li><p><strong>plotSeparation</strong> (<em>float, optional, default 0.1</em>) – Separation between the border plots and the center plot.</p></li>
+<li><p><strong>cColor</strong> (<em>string, optional</em>) – hex value or named color to use in the center plot.</p></li>
+<li><p><strong>cKdeFill</strong> (<em>boolean, optional, default True</em>) – If true it fills the center plot kde surfaces,
+if False, draw only the borders. Only if cKind is “kde”</p></li>
+<li><p><strong>cHexGrid</strong> (<em>integer, optional, default 20.</em>) – Number of hexagonal grids along a axis for the center plot.
+Only if cKind is “hex”.</p></li>
+<li><p><strong>cHexGridColor</strong> (<em>string, optional, default “w”</em>) – hex value or named color to use in the center plot
+for the hex grid borders. Only if cKind is “hex”</p></li>
+<li><p><strong>bColor</strong> (<em>string, optional</em>) – hex value or named color to use in the border plots.</p></li>
+<li><p><strong>bBins</strong> (<em>integer, optional, default 20</em>) – Number of bins (columns) of the border plots.</p></li>
+<li><p><strong>bRug</strong> (<em>boolean, optional, default True</em>) – It switches on and off the rug representation in the border plot.</p></li>
+<li><p><strong>bKde</strong> (<em>boolean, optional, default True</em>) – It switches on and off the kde line representation in the border plots.</p></li>
+<li><p><strong>bHist</strong> (<em>boolean, optional, default True</em>) – It switches on and off the histogram representation in the border plots.</p></li>
+<li><p><strong>palette</strong> (<em>seaborn compatible palette, optional</em>) – Can be the name of a seaborn palette,
+a seaborn palette or a list interpretable
+as a palette by seaborn.</p></li>
+<li><p><strong>fileName</strong> (<em>string, optional</em>) – If not provided graphTitle will be used.
+Non alphanumeric values will be deleted.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;X_coord&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;Y_coord&quot;</span><span class="p">:</span> <span class="n">y</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scatterHist</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">xCol</span><span class="o">=</span><span class="s2">&quot;X_coord&quot;</span><span class="p">,</span> <span class="n">yCol</span><span class="o">=</span><span class="s2">&quot;Y_coord&quot;</span><span class="p">,</span>
+<span class="gp">... </span>            <span class="n">graphTitle</span><span class="o">=</span><span class="s2">&quot;Test Title&quot;</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>            <span class="n">cKind</span><span class="o">=</span><span class="s2">&quot;hex&quot;</span><span class="p">,</span> <span class="n">fileName</span><span class="o">=</span><span class="s2">&quot;scatt Hist Test&quot;</span><span class="p">,</span>
+<span class="gp">... </span>            <span class="n">xLabel</span><span class="o">=</span><span class="s2">&quot;x label&quot;</span><span class="p">,</span> <span class="n">yLabel</span><span class="o">=</span><span class="s2">&quot;y label&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../_images/scattHistTest1.png"><img alt="../_images/scattHistTest1.png" class="align-center" src="../_images/scattHistTest1.png" style="width: 600px;" /></a>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="stackedBars.html" class="btn btn-neutral float-right" title="stackedBars" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="scatterPlotMatrix.html" class="btn btn-neutral float-left" title="scatterPlotMatrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, &#34;U64053&#34;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+\indexentry{module@\spxentry{module}!boxPlot@\spxentry{boxPlot}|hyperpage}{9}
+\indexentry{boxPlot@\spxentry{boxPlot}!module@\spxentry{module}|hyperpage}{9}
+\indexentry{boxPlotter() (in module boxPlot)@\spxentry{boxPlotter()}\spxextra{in module boxPlot}|hyperpage}{9}
+\indexentry{module@\spxentry{module}!enhancedTable@\spxentry{enhancedTable}|hyperpage}{11}
+\indexentry{enhancedTable@\spxentry{enhancedTable}!module@\spxentry{module}|hyperpage}{11}
+\indexentry{enhancedTable() (in module enhancedTable)@\spxentry{enhancedTable()}\spxextra{in module enhancedTable}|hyperpage}{11}
+\indexentry{module@\spxentry{module}!horizontalBarPlot@\spxentry{horizontalBarPlot}|hyperpage}{15}
+\indexentry{horizontalBarPlot@\spxentry{horizontalBarPlot}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{hBarPlot() (in module horizontalBarPlot)@\spxentry{hBarPlot()}\spxextra{in module horizontalBarPlot}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!metricsEvolution@\spxentry{metricsEvolution}|hyperpage}{19}
+\indexentry{metricsEvolution@\spxentry{metricsEvolution}!module@\spxentry{module}|hyperpage}{19}
+\indexentry{metricEvolutionGraph() (in module metricsEvolution)@\spxentry{metricEvolutionGraph()}\spxextra{in module metricsEvolution}|hyperpage}{19}
+\indexentry{module@\spxentry{module}!ocurrencePieChart@\spxentry{ocurrencePieChart}|hyperpage}{23}
+\indexentry{ocurrencePieChart@\spxentry{ocurrencePieChart}!module@\spxentry{module}|hyperpage}{23}
+\indexentry{ocurrPieChart() (in module ocurrencePieChart)@\spxentry{ocurrPieChart()}\spxextra{in module ocurrencePieChart}|hyperpage}{23}
+\indexentry{module@\spxentry{module}!ocurrTable@\spxentry{ocurrTable}|hyperpage}{25}
+\indexentry{ocurrTable@\spxentry{ocurrTable}!module@\spxentry{module}|hyperpage}{25}
+\indexentry{ocurrenceTable() (in module ocurrTable)@\spxentry{ocurrenceTable()}\spxextra{in module ocurrTable}|hyperpage}{25}
+\indexentry{module@\spxentry{module}!polarPlot@\spxentry{polarPlot}|hyperpage}{29}
+\indexentry{polarPlot@\spxentry{polarPlot}!module@\spxentry{module}|hyperpage}{29}
+\indexentry{polarBarPlot() (in module polarPlot)@\spxentry{polarBarPlot()}\spxextra{in module polarPlot}|hyperpage}{29}
+\indexentry{module@\spxentry{module}!progressPlot@\spxentry{progressPlot}|hyperpage}{33}
+\indexentry{progressPlot@\spxentry{progressPlot}!module@\spxentry{module}|hyperpage}{33}
+\indexentry{progressPlot() (in module progressPlot)@\spxentry{progressPlot()}\spxextra{in module progressPlot}|hyperpage}{33}
+\indexentry{module@\spxentry{module}!radarArray@\spxentry{radarArray}|hyperpage}{37}
+\indexentry{radarArray@\spxentry{radarArray}!module@\spxentry{module}|hyperpage}{37}
+\indexentry{radarArrayGraph() (in module radarArray)@\spxentry{radarArrayGraph()}\spxextra{in module radarArray}|hyperpage}{37}
+\indexentry{module@\spxentry{module}!scatterPlotMatrix@\spxentry{scatterPlotMatrix}|hyperpage}{41}
+\indexentry{scatterPlotMatrix@\spxentry{scatterPlotMatrix}!module@\spxentry{module}|hyperpage}{41}
+\indexentry{scatterMatrix() (in module scatterPlotMatrix)@\spxentry{scatterMatrix()}\spxextra{in module scatterPlotMatrix}|hyperpage}{41}
+\indexentry{module@\spxentry{module}!scattHist@\spxentry{scattHist}|hyperpage}{43}
+\indexentry{scattHist@\spxentry{scattHist}!module@\spxentry{module}|hyperpage}{43}
+\indexentry{scatterHist() (in module scattHist)@\spxentry{scatterHist()}\spxextra{in module scattHist}|hyperpage}{43}
+\indexentry{module@\spxentry{module}!stackedBars@\spxentry{stackedBars}|hyperpage}{47}
+\indexentry{stackedBars@\spxentry{stackedBars}!module@\spxentry{module}|hyperpage}{47}
+\indexentry{stackedbars() (in module stackedBars)@\spxentry{stackedbars()}\spxextra{in module stackedBars}|hyperpage}{47}
+\indexentry{module@\spxentry{module}!standartColorPalette@\spxentry{standartColorPalette}|hyperpage}{49}
+\indexentry{standartColorPalette@\spxentry{standartColorPalette}!module@\spxentry{module}|hyperpage}{49}
+\indexentry{stdColor() (in module standartColorPalette)@\spxentry{stdColor()}\spxextra{in module standartColorPalette}|hyperpage}{49}
+\indexentry{module@\spxentry{module}!verticalBarPlot@\spxentry{verticalBarPlot}|hyperpage}{51}
+\indexentry{verticalBarPlot@\spxentry{verticalBarPlot}!module@\spxentry{module}|hyperpage}{51}
+\indexentry{vBarPlot() (in module verticalBarPlot)@\spxentry{vBarPlot()}\spxextra{in module verticalBarPlot}|hyperpage}{51}

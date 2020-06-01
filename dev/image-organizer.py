@@ -57,7 +57,7 @@ def scanDir():
         for directory in directories:
             if not directory[0] in scanDirs:
                 scanDirs.append(directory[0])
-    for folderPath in scanDirs[150:]:
+    for folderPath in scanDirs:
         started = datetime.now()
         logging.info(f"{os.path.basename(folderPath)} started at {started}")
         scanned,relocated = 0,0
@@ -81,7 +81,7 @@ def scanDir():
 
                         except:
                             try: 
-                                newImageDirectoy = f"E:\\RELOCATED\\NO EXIF"
+                                newImageDirectoy = f"Z:\\RELOCATED\\NO EXIF"
                                 newImagePath = f"{newImageDirectoy}\\{os.path.basename(imagePath)}"
                                 if not os.path.exists(newImagePath):
                                     if not os.path.exists(newImageDirectoy):
@@ -117,13 +117,13 @@ def scanDir():
                                 datePath = "desconocido"
                             try:
                                 if hasattr (my_image,"model"):
-                                    newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\{my_image.model}"
+                                    newImageDirectoy = f"Z:\\RELOCATED\\{datePath}\\{my_image.model}"
                                 elif hasattr (my_image, "software"):
-                                    newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\{my_image.software}"
+                                    newImageDirectoy = f"Z:\\RELOCATED\\{datePath}\\{my_image.software}"
                                 else:
-                                    newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\desconocido"
+                                    newImageDirectoy = f"Z:\\RELOCATED\\{datePath}\\desconocido"
                             except:
-                                newImageDirectoy = f"E:\\RELOCATED\\{datePath}\\desconocido"
+                                newImageDirectoy = f"Z:\\RELOCATED\\{datePath}\\desconocido"
 
                             newImagePath = f"{newImageDirectoy}\\{os.path.basename(imagePath)}"
                             try:    
@@ -139,7 +139,7 @@ def scanDir():
                                 #logging.error(f"Error processing {os.path.basename(imagePath)}")
                                             # input()
                         else:
-                            newImageDirectoy = f"E:\\RELOCATED\\NO EXIF"
+                            newImageDirectoy = f"Z:\\RELOCATED\\NO EXIF"
                             newImagePath = f"{newImageDirectoy}\\{os.path.basename(imagePath)}"
                             if not os.path.exists(newImagePath):
                                     if not os.path.exists(newImageDirectoy):

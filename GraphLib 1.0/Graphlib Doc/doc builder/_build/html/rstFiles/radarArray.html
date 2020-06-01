@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>radarArray &mdash; GraphLib 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="scatterPlotMatrix" href="scatterPlotMatrix.html" />
+    <link rel="prev" title="progressPlot" href="progressPlot.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GraphLib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../graphImageIndex.html">Graph Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boxPlot.html">boxPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enhancedTable.html">enhancedTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="horizontalBarPlot.html">horizontalBarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metricsEvolution.html">metricsEvolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrencePieChart.html">ocurrencePieChart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocurrTable.html">ocurrTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarPlot.html">polarPlot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="progressPlot.html">progressPlot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">radarArray</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scatterPlotMatrix.html">scatterPlotMatrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scattHist.html">scattHist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stackedBars.html">stackedBars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standartColorPalette.html">standartColorPalette</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verticalBarPlot.html">verticalBarPlot</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraphLib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>radarArray</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rstFiles/radarArray.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-radarArray">
+<span id="radararray"></span><h1>radarArray<a class="headerlink" href="#module-radarArray" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: u64053</p>
+<dl class="py function">
+<dt id="radarArray.radarArrayGraph">
+<code class="sig-prename descclassname">radarArray.</code><code class="sig-name descname">radarArrayGraph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">titleCol</span></em>, <em class="sig-param"><span class="n">radiusCol</span></em>, <em class="sig-param"><span class="n">graphHeader</span></em>, <em class="sig-param"><span class="n">save</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#radarArray.radarArrayGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>It represents an array of radarGraphs,
+with the possibility to use custom axes for each variable.
+Can represent a reference value and deviation form reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – Dataframe containing the data.</p></li>
+<li><p><strong>titleCol</strong> (<em>string</em><em>,</em>) – Dataframe column header containing
+the elements of the graph,
+one plot will be made for each element in this column
+and the value of this colum will be used as title.</p></li>
+<li><p><strong>radiusCol</strong> (<em>list of strings</em><em>,</em>) – variables to represent in the radius of the plots.</p></li>
+<li><p><strong>graphHeader</strong> (<em>string</em>) – Header to display for the graph,
+will be used for naming the saved file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fig</strong> – figure that stores the generated graph.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib figure object.</p>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>numPlotCols</strong> (<em>int, optional</em>) – For the array of plots, number of columns.
+If not provided a layout as squared as posible will be used.</p></li>
+<li><p><strong>radTicksNum</strong> (<em>int, optional, default 4</em>) – Number of circular grid lines.</p></li>
+<li><p><strong>xSize</strong> (<em>float, optional, default 12</em>) – Max horizontal size of the figure, in inches.</p></li>
+<li><p><strong>ySize</strong> (<em>float, optional, default 12</em>) – max vertical size of the figure, in inches.</p></li>
+<li><p><strong>multiScale</strong> (<em>boolean, optional, default False.</em>) – If True, activates multiple escale mode
+for the radial axis of the plots.</p></li>
+<li><p><strong>radLim</strong> (<em>float, optional,</em>) – if <cite>multiScale</cite> is False, maxiumun value for the radial axes.</p></li>
+<li><p><strong>radiusMax</strong> (<em>list of floats, optional</em>) – if <cite>multiScale</cite> is True, maximun value for each
+of the axes, use the order defined in <cite>radiusCol</cite>.</p></li>
+<li><p><strong>fontScale</strong> (<em>float, optional, default 1</em>) – global scalation factor for every text of the figure.</p></li>
+<li><p><strong>radTextSize</strong> (<em>string, optional, default “large”</em>) – relative font size of the labels of the axes.
+Valid values are  ‘xx-small’, ‘x-small’, ‘small’,
+‘medium’, ‘large’, ‘x-large’, ‘xx-large’</p></li>
+<li><p><strong>scaleTextSize</strong> (<em>string, optional, default “small”</em>) – relative font size of the labels of the plot grid.
+Valid values are  ‘xx-small’, ‘x-small’, ‘small’,
+‘medium’, ‘large’, ‘x-large’, ‘xx-large’</p></li>
+<li><p><strong>titleTextSize</strong> (<em>string, optional, default “large”,</em>) – Relative font size of the title of each plot.
+Valid values are  ‘xx-small’, ‘x-small’, ‘small’,
+‘medium’, ‘large’, ‘x-large’, ‘xx-large’</p></li>
+<li><p><strong>headerTextSize</strong> (<em>string, optional, default “x-large”</em>) – relative font size of the header of the figure.
+Valid values are  ‘xx-small’, ‘x-small’, ‘small’,
+‘medium’, ‘large’, ‘x-large’, ‘xx-large’</p></li>
+<li><p><strong>headerVerPad</strong> (<em>float, optional, default 0.08</em>) – vertical padding for the header of the figure.</p></li>
+<li><p><strong>color</strong> (<em>string, optional, default False,</em>) – if false chooses the first color of the current palette.</p></li>
+<li><p><strong>reference</strong> (<em>list of strings, optional, default False,</em>) – if not false, value in the dataframe in
+the col titleCol to use as a reference,
+this register will be used as a reference
+and not represented as a separated plot.</p></li>
+<li><p><strong>referCol</strong> (<em>string, optional</em>) – Header of the col of the dataframe
+to use as key to add references.
+If not provided, all the itemps in <cite>reference</cite> are allways displayed.</p></li>
+<li><p><strong>referColor</strong> (<em>list of strings, optional,</em>) – Colors to use to represent reference values.
+Must have more elements than reference.</p></li>
+<li><p><strong>devTable</strong> (<em>boolean, optional, default False</em>) – If true, a table with de deviation
+from the reference is displayed.</p></li>
+<li><p><strong>legTitle</strong> (<em>string, optional, default “Ref. Deviation”</em>) – text to display as the title of the deviation table.</p></li>
+<li><p><strong>palette</strong> (<em>seaborn compatible palette,</em>) – Can be the name of a seaborn palette,
+a seaborn palette or a list
+interpretable as a palette by seaborn.</p></li>
+<li><p><strong>fileName</strong> (<em>string, optional</em>) – File name to save, if not provided graphHeader will be used.
+Non alphanumeric values will be deleted.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;AC&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;S1&quot;</span><span class="p">,</span><span class="s2">&quot;S2&quot;</span><span class="p">,</span><span class="s2">&quot;SXXX&quot;</span><span class="p">,</span><span class="s2">&quot;SYYY&quot;</span><span class="p">,</span><span class="s2">&quot;SZZZ&quot;</span><span class="p">,</span><span class="s2">&quot;SAAA&quot;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="s2">&quot;SBBB&quot;</span><span class="p">,</span><span class="s2">&quot;SBB1&quot;</span><span class="p">,</span><span class="s2">&quot;SBB2&quot;</span><span class="p">,</span><span class="s2">&quot;SBB3&quot;</span><span class="p">,</span><span class="s2">&quot;SB34&quot;</span><span class="p">,</span><span class="s2">&quot;SB67&quot;</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;rad1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">1800</span><span class="p">,</span> <span class="mi">1200</span><span class="p">,</span> <span class="mi">1700</span><span class="p">,</span> <span class="mi">1700</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span>
+<span class="gp">... </span>               <span class="mi">1860</span><span class="p">,</span> <span class="mi">1900</span><span class="p">,</span> <span class="mi">1720</span><span class="p">,</span> <span class="mi">1650</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">1234</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;rad2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1650</span><span class="p">,</span> <span class="mi">1600</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1700</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span>
+<span class="gp">... </span>               <span class="mi">1860</span><span class="p">,</span> <span class="mi">1900</span><span class="p">,</span> <span class="mi">1720</span><span class="p">,</span> <span class="mi">1650</span><span class="p">,</span> <span class="mi">650</span> <span class="p">,</span><span class="mi">1234</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;rad4&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">180</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span>
+<span class="gp">... </span>               <span class="mi">160</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">720</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">1234</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;rad5&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span>
+<span class="gp">... </span>               <span class="mi">520</span><span class="p">,</span> <span class="mi">495</span><span class="p">,</span> <span class="mi">605</span><span class="p">,</span> <span class="mi">675</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">1234</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;rad6&quot;</span><span class="p">:[</span><span class="mf">0.550</span><span class="p">,</span> <span class="mf">0.600</span><span class="p">,</span> <span class="mf">0.600</span><span class="p">,</span> <span class="mf">0.500</span><span class="p">,</span> <span class="mf">0.650</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="mf">0.55</span><span class="p">,</span> <span class="mf">0.52</span><span class="p">,</span> <span class="mf">0.495</span><span class="p">,</span> <span class="mf">0.605</span><span class="p">,</span> <span class="mf">0.675</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.1234</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;rad7&quot;</span><span class="p">:[</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">1400</span><span class="p">,</span> <span class="mi">1600</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">1650</span><span class="p">,</span> <span class="mi">1550</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="mi">1520</span><span class="p">,</span> <span class="mi">1495</span><span class="p">,</span> <span class="mi">1605</span><span class="p">,</span> <span class="mi">1675</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">1234</span><span class="p">],</span>
+<span class="gp">... </span>      <span class="s2">&quot;type&quot;</span><span class="p">:[</span><span class="s2">&quot;na&quot;</span><span class="p">,</span> <span class="s2">&quot;na&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+<span class="gp">... </span>              <span class="s2">&quot;no data&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;no data&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">,</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">radarArrayGraph</span><span class="p">(</span>
+<span class="gp">... </span>        <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+<span class="gp">... </span>        <span class="s2">&quot;AC&quot;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="p">[</span><span class="s2">&quot;rad7&quot;</span><span class="p">,</span> <span class="s2">&quot;rad4&quot;</span><span class="p">,</span> <span class="s2">&quot;rad6&quot;</span><span class="p">,</span> <span class="s2">&quot;rad1&quot;</span><span class="p">,</span> <span class="s2">&quot;rad2&quot;</span><span class="p">,</span> <span class="s2">&quot;rad5&quot;</span><span class="p">],</span>
+<span class="gp">... </span>        <span class="s1">&#39;radar Array Example&#39;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">numPlotCols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">radTicksNum</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">xSize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">ySize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">radLim</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">multiScale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">devTable</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">fontScale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">radiusMax</span><span class="o">=</span><span class="p">[</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span>
+<span class="gp">... </span>        <span class="n">radTextSize</span><span class="o">=</span><span class="s2">&quot;large&quot;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">scaleTextSize</span><span class="o">=</span><span class="s2">&quot;x-small&quot;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">titleTextSize</span><span class="o">=</span><span class="s2">&quot;large&quot;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">headerTextSize</span><span class="o">=</span><span class="s2">&quot;x-large&quot;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">headerVerPad</span><span class="o">=</span><span class="mf">0.08</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#4299E1&#39;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">reference</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;S1&quot;</span><span class="p">,</span> <span class="s2">&quot;S2&quot;</span><span class="p">],</span>
+<span class="gp">... </span>        <span class="n">referCol</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#ED8936&#39;</span><span class="p">,</span> <span class="s1">&#39;#48BB78&#39;</span><span class="p">,</span> <span class="s1">&#39;#F56565&#39;</span><span class="p">,</span> <span class="s1">&#39;#9F7AEA&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="s1">&#39;#38B2AC&#39;</span><span class="p">,</span> <span class="s1">&#39;#ED64A6&#39;</span><span class="p">,</span> <span class="s1">&#39;#A0AEC0&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="s1">&#39;#ECC94B&#39;</span><span class="p">,</span> <span class="s1">&#39;#4299E1&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<a class="reference internal image-reference" href="../_images/radarArrayExample1.png"><img alt="../_images/radarArrayExample1.png" class="align-center" src="../_images/radarArrayExample1.png" style="width: 600px;" /></a>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="scatterPlotMatrix.html" class="btn btn-neutral float-right" title="scatterPlotMatrix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="progressPlot.html" class="btn btn-neutral float-left" title="progressPlot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, &#34;U64053&#34;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
