@@ -8,7 +8,7 @@ threads = []
 
 def relocate(paths):
     imagePath, newImagePath = paths
-    shutil.copy2(imagePath, newImagePath, follow_symlinks=True)
+    shutil.copy2(imagePath, newImagePath)
     print  (f"{os.path.basename(imagePath)} relocated")
 
 def scanFile():

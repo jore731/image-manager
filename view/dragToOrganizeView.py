@@ -6,17 +6,17 @@ import concurrent.futures
 import time
 import json
 import shutil
+from pathlib import Path
 
 class dragToOrganizeView(QWidget):
     def __init__(self):
         super().__init__()
         self.resize(CommonVariables.desktopSize*0.5)
         self.move((CommonVariables.desktopSize.width()-self.width())/2,
-                  (CommonVariables.desktopSize.height()-self.height())/2)
+                    (CommonVariables.desktopSize.height()-self.height())/2)
         self.setAcceptDrops(True)
         
-
-    def dragEnterEvent(self, event): 
+    def dropEvent(self, event):
         t = time.time()
         _ = concurrent.futures.ThreadPoolExecutor().submit(self.analyzeSetOfPictures, [event.mimeData().urls(),t])
                              
@@ -58,27 +58,27 @@ class dragToOrganizeView(QWidget):
     def analyzeSetOfPictures(self,kargs):
         urls = kargs [0]
         t = kargs[1]
-        print(f'Thread started: {self}')
+        # print(f'Thread started: {self}')
         for url in urls:
             self.analyzePicture(url)
-        print(f'Time for multithreading processing: {time.time() - t}')
+        # print(f'Time for multithreading processing: {time.time() - t}')
 
 
-
-    def analyzePicture(self,url):    
-            try:
-                NEF = tiffreader.NEFImage(url.path()[1:])
-            except ValueError as err:
-                # print(format(err))
-                return
-            relPath = NEF.relocatePath(os.path.dirname(NEF.imagePath), ["capyear", "capmonth", "capday", "capdevice"])
-            self.createDir(relPath)
-            relFile = os.path.join(relPath,NEF.fileName)
-            print(relFile)
-            shutil.copy2(NEF.imagePath, relFile)
-            # if not hasattr(NEF, "jsonPath"):
-            #     NEF.createJSON(os.path.join(os.path.dirname(NEF.imagePath),"json"))
-            # print(relPath)
+    def analyzePicture(self,url):
+        path = Path(url.path()[1:])
+        try:
+            NEF = tiffreader.NEFImage(path)
+        except ValueError as err:
+            # print(format(err))
+            return
+        relPath = NEF.relocatePath(os.path.dirname(NEF.imagePath), ["capyear", "capmonth", "capday", "capdevice"])
+        self.createDir(relPath)
+        relFile = os.path.join(relPath,NEF.fileName)
+        print(relFile)
+        shutil.copy2(NEF.imagePath, relFile)
+        # if not hasattr(NEF, "jsonPath"):
+        #     NEF.createJSON(os.path.join(os.path.dirname(NEF.imagePath),"json"))
+        # print(relPath)
 
     def createDir(self,path):
         splitted = path.split("/")
